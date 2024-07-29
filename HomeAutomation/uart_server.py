@@ -5,7 +5,12 @@ import threading
 app = Flask(__name__)
 
 # Configurăm portul serial
-ser = serial.Serial('/dev/ttyACM1', 9600, timeout=1)
+try:
+    ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+    print("Conexiune serial deschisă")
+except Exception as e:
+    print(f"Eroare la deschiderea portului serial: {e}")
+    ser = None
 
 # Variabilă globală pentru stocarea mesajelor
 messages = []
@@ -13,19 +18,21 @@ messages = []
 # Funcție pentru citirea mesajelor din UART
 def read_from_uart():
     global messages
-    while True:
-        if ser.in_waiting > 0:
-            message = ser.readline().decode('utf-8').strip()
-            if message:
-                messages.append(message)
-                # Limităm numărul de mesaje pentru a evita utilizarea excesivă a memoriei
-                if len(messages) > 100:
-                    messages.pop(0)
+    if ser:
+        while True:
+            if ser.in_waiting > 0:
+                message = ser.readline().decode('utf-8').strip()
+                if message:
+                    messages.append(message)
+                    # Limităm numărul de mesaje pentru a evita utilizarea excesivă a memoriei
+                    if len(messages) > 100:
+                        messages.pop(0)
 
 # Pornim thread-ul pentru citirea de la UART
-uart_thread = threading.Thread(target=read_from_uart)
-uart_thread.daemon = True
-uart_thread.start()
+if ser:
+    uart_thread = threading.Thread(target=read_from_uart)
+    uart_thread.daemon = True
+    uart_thread.start()
 
 # Pagina web pentru a afișa mesajele și controla LED-ul
 @app.route('/')
@@ -39,12 +46,6 @@ def index():
             <title>Control LED UART</title>
         </head>
         <body>
-            <h1>Mesaje UART</h1>
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
             <h2>Control LED</h2>
             <form action="/led/on" method="post">
                 <button type="submit">Aprinde LED</button>
@@ -52,18 +53,33 @@ def index():
             <form action="/led/off" method="post">
                 <button type="submit">Stinge LED</button>
             </form>
+                                  
+            <h1>Mesaje UART</h1>
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
         </body>
         </html>
     ''', messages=messages)
 
 @app.route('/led/on', methods=['POST'])
 def led_on():
-    ser.write(b'1\n')  # Trimitere comanda de aprindere a LED-ului
+    if ser:
+        ser.write(b'1\n')
+        print("Comanda LED ON trimisă")
+    else:
+        print("Portul serial nu este deschis")
     return redirect(url_for('index'))
 
 @app.route('/led/off', methods=['POST'])
 def led_off():
-    ser.write(b'0\n')  # Trimitere comanda de stingere a LED-ului
+    if ser:
+        ser.write(b'0\n')
+        print("Comanda LED OFF trimisă")
+    else:
+        print("Portul serial nu este deschis")
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
