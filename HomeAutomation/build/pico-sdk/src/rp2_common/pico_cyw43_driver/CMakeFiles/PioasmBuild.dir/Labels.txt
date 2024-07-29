@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.rule
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild-complete.rule
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule
