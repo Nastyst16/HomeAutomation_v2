@@ -1,0 +1,5 @@
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/elf2uf2/CMakeFiles/elf2uf2.dir
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/elf2uf2/CMakeFiles/edit_cache.dir
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/elf2uf2/CMakeFiles/rebuild_cache.dir
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/elf2uf2/boot_uf2_headers/CMakeFiles/edit_cache.dir
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/elf2uf2/boot_uf2_headers/CMakeFiles/rebuild_cache.dir
