@@ -1,62 +1,38 @@
 #include "pico/stdlib.h"
-#include "hardware/uart.h"
 #include <stdio.h>
 
-// Definim pinul LED-ului
 #define LED_PIN 20
 
-// Inițializăm UART0
-#define UART_ID uart0
-#define UART_BAUD_RATE 9600
-#define UART_TX_PIN 16
-#define UART_RX_PIN 17
-
-void setup_uart() {
-    uart_init(UART_ID, UART_BAUD_RATE);
-    gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
-    gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
-    uart_set_format(UART_ID, 8, UART_PARITY_NONE, 1);
-    uart_set_hw_flow(UART_ID, false, false);
-    uart_set_fifo_enabled(UART_ID, true);
-    printf("UART configurat.\n");
-}
-   
-void setup_led() {
+int main() {
+    // Initialize the LED pin
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
-    gpio_put(LED_PIN, 0); // Asigură-te că LED-ul este oprit la început
-    printf("LED configurat.\n");
-}
+    gpio_put(LED_PIN, 0); // LED off initially
 
-void control_led(char command) {
-    if (command == '1') {
-        gpio_put(LED_PIN, 1); // Aprinde LED-ul
-        printf("LED ON\n");
-    } else if (command == '0') {
-        gpio_put(LED_PIN, 0); // Stinge LED-ul
-        printf("LED OFF\n");
-    } else {
-        printf("Comandă necunoscută: %c\n", command);
-    }
-}
-
-int main() {
+    // Initialize stdio
     stdio_init_all();
-    setup_uart();
-    setup_led();
-    char c;
 
+    // print to serial
+    printf("Begin Home Automation\n");
     while (true) {
 
-        if (uart_is_readable(UART_ID)) {
-            char command = uart_getc(UART_ID);
-            printf("Comandă primită: %c\n", command);
-            control_led(command);
+        // Check if there are characters available from USB serial
+        int ch = getchar_timeout_us(0);  // Non-blocking read with 0 timeout
+
+        if (ch != PICO_ERROR_TIMEOUT) {
+            printf("Received: %c\n", ch);
+            // Control the LED based on the command received
+            if (ch == '1') {
+                gpio_put(LED_PIN, 1); // Turn on the LED
+            } else if (ch == '0') {
+                gpio_put(LED_PIN, 0); // Turn off the LED
+            }
         } else {
-            printf("Aștept comandă...\n"); 
+            // No characters received
+            printf("No characters received\n");
         }
 
-        // Pauză scurtă pentru a nu ocupa complet CPU-ul
+        // Short delay to prevent high CPU usage
         sleep_ms(1000);
     }
 
