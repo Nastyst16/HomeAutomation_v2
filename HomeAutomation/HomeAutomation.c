@@ -1,7 +1,7 @@
 #include "pico/stdlib.h"
 #include <stdio.h>
 
-#define LED_PIN 20
+#define LED_PIN 15
 
 int main() {
     // Initialize the LED pin
