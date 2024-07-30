@@ -12,21 +12,37 @@ except Exception as e:
     print(f"Eroare la deschiderea portului serial: {e}")
     ser = None
 
-# Variabilă globală pentru stocarea mesajelor
+# Variabilă globală pentru stocarea mesajelor și a datelor de temperatură/umiditate
 messages = []
+temperature = "N/A"
+humidity = "N/A"
 
 # Funcție pentru citirea mesajelor din UART
 def read_from_uart():
-    global messages
+    global messages, temperature, humidity
     if ser:
         while True:
             if ser.in_waiting > 0:
-                message = ser.readline().decode('utf-8').strip()
+                try:
+                    message = ser.readline().decode('utf-8').strip()
+                except UnicodeDecodeError:
+                    message = ser.readline().decode('latin1').strip()  # Use a fallback encoding
                 if message:
                     messages.append(message)
                     # Limităm numărul de mesaje pentru a evita utilizarea excesivă a memoriei
                     if len(messages) > 100:
                         messages.pop(0)
+
+                    # Verificăm dacă mesajul conține date de temperatură și umiditate
+                    if "Temp:" in message and "Hum:" in message:
+                        try:
+                            parts = message.split(',')
+                            temp_part = parts[0].split(':')[1].strip()
+                            hum_part = parts[1].split(':')[1].strip()
+                            temperature = temp_part
+                            humidity = hum_part
+                        except Exception as e:
+                            print(f"Eroare la parsarea mesajului: {e}")
 
 # Pornim thread-ul pentru citirea de la UART
 if ser:
@@ -34,7 +50,7 @@ if ser:
     uart_thread.daemon = True
     uart_thread.start()
 
-# Pagina web pentru a afișa mesajele și controla LED-ul
+# Pagina web pentru a afișa mesajele, datele de temperatură/umiditate și controla LED-ul
 @app.route('/')
 def index():
     return render_template_string('''
@@ -53,6 +69,10 @@ def index():
             <form action="/led/off" method="post">
                 <button type="submit">Stinge LED</button>
             </form>
+            
+            <h2>Temperatură și Umiditate</h2>
+            <p>Temperatură: {{ temperature }}°C</p>
+            <p>Umiditate: {{ humidity }}%</p>
                                   
             <h1>Mesaje UART</h1>
             <ul>
@@ -62,7 +82,7 @@ def index():
             </ul>
         </body>
         </html>
-    ''', messages=messages)
+    ''', messages=messages, temperature=temperature, humidity=humidity)
 
 @app.route('/led/on', methods=['POST'])
 def led_on():
