@@ -8,8 +8,8 @@
 // Inițializăm UART0
 #define UART_ID uart0
 #define UART_BAUD_RATE 9600
-#define UART_TX_PIN 0
-#define UART_RX_PIN 1
+#define UART_TX_PIN 16
+#define UART_RX_PIN 17
 
 void setup_uart() {
     uart_init(UART_ID, UART_BAUD_RATE);
@@ -20,7 +20,7 @@ void setup_uart() {
     uart_set_fifo_enabled(UART_ID, true);
     printf("UART configurat.\n");
 }
-
+   
 void setup_led() {
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
@@ -47,17 +47,6 @@ int main() {
     char c;
 
     while (true) {
-    
-        // printf("inaite de read blocking\n");
-        // uart_read_blocking(UART_ID, &c, 1);
-        // printf("dupa read blocking\n");
-
-        // if (c == 1 || c == 0 || c == '1' || c == '0') {
-        //     control_led(c);
-        //     printf("Comandă primită: %c\n", c);
-        // } else {
-        //     printf("Comandă necunoscută: %c\n", c);
-        // }
 
         if (uart_is_readable(UART_ID)) {
             char command = uart_getc(UART_ID);
