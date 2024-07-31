@@ -222,6 +222,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.6/CMakeSystem.cmake"
   "elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/PioasmBuild-mkdirs.cmake"
+  "/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/dht/CMakeLists.txt"
   "/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/pico_sdk_import.cmake"
   )
 
@@ -333,15 +334,17 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "pico-sdk/src/rp2040/hardware_regs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/src/rp2040/hardware_structs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "dht/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/HomeAutomation.dir/DependInfo.cmake"
+  "CMakeFiles/dht_example.dir/DependInfo.cmake"
   "CMakeFiles/ELF2UF2Build.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/PioasmBuild.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/DependInfo.cmake"
+  "dht/CMakeFiles/dht_dht_pio_h.dir/DependInfo.cmake"
   )

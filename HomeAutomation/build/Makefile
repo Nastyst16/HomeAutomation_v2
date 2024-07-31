@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HomeAutomation
+# Target rules for targets named dht_example
 
 # Build rule for target.
-HomeAutomation: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HomeAutomation
-.PHONY : HomeAutomation
+dht_example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dht_example
+.PHONY : dht_example
 
 # fast build rule for target.
-HomeAutomation/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/build
-.PHONY : HomeAutomation/fast
+dht_example/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/build
+.PHONY : dht_example/fast
 
 #=============================================================================
 # Target rules for targets named ELF2UF2Build
@@ -207,60 +207,73 @@ cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build.make pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/build
 .PHONY : cyw43_driver_picow_cyw43_bus_pio_spi_pio_h/fast
 
-HomeAutomation.obj: HomeAutomation.c.obj
-.PHONY : HomeAutomation.obj
+#=============================================================================
+# Target rules for targets named dht_dht_pio_h
+
+# Build rule for target.
+dht_dht_pio_h: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dht_dht_pio_h
+.PHONY : dht_dht_pio_h
+
+# fast build rule for target.
+dht_dht_pio_h/fast:
+	$(MAKE) $(MAKESILENT) -f dht/CMakeFiles/dht_dht_pio_h.dir/build.make dht/CMakeFiles/dht_dht_pio_h.dir/build
+.PHONY : dht_dht_pio_h/fast
+
+dht/dht.obj: dht/dht.c.obj
+.PHONY : dht/dht.obj
 
 # target to build an object file
-HomeAutomation.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/HomeAutomation.c.obj
-.PHONY : HomeAutomation.c.obj
+dht/dht.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/dht/dht.c.obj
+.PHONY : dht/dht.c.obj
 
-HomeAutomation.i: HomeAutomation.c.i
-.PHONY : HomeAutomation.i
+dht/dht.i: dht/dht.c.i
+.PHONY : dht/dht.i
 
 # target to preprocess a source file
-HomeAutomation.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/HomeAutomation.c.i
-.PHONY : HomeAutomation.c.i
+dht/dht.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/dht/dht.c.i
+.PHONY : dht/dht.c.i
 
-HomeAutomation.s: HomeAutomation.c.s
-.PHONY : HomeAutomation.s
+dht/dht.s: dht/dht.c.s
+.PHONY : dht/dht.s
 
 # target to generate assembly for a file
-HomeAutomation.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/HomeAutomation.c.s
-.PHONY : HomeAutomation.c.s
+dht/dht.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/dht/dht.c.s
+.PHONY : dht/dht.c.s
 
-dht11.obj: dht11.c.obj
-.PHONY : dht11.obj
+dht_example.obj: dht_example.c.obj
+.PHONY : dht_example.obj
 
 # target to build an object file
-dht11.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/dht11.c.obj
-.PHONY : dht11.c.obj
+dht_example.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/dht_example.c.obj
+.PHONY : dht_example.c.obj
 
-dht11.i: dht11.c.i
-.PHONY : dht11.i
+dht_example.i: dht_example.c.i
+.PHONY : dht_example.i
 
 # target to preprocess a source file
-dht11.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/dht11.c.i
-.PHONY : dht11.c.i
+dht_example.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/dht_example.c.i
+.PHONY : dht_example.c.i
 
-dht11.s: dht11.c.s
-.PHONY : dht11.s
+dht_example.s: dht_example.c.s
+.PHONY : dht_example.s
 
 # target to generate assembly for a file
-dht11.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/dht11.c.s
-.PHONY : dht11.c.s
+dht_example.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/dht_example.c.s
+.PHONY : dht_example.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.obj
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.i
@@ -268,7 +281,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.i: h
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.s
@@ -276,7 +289,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.s: h
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.obj
@@ -284,7 +297,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.obj: hom
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.i
@@ -292,7 +305,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.i: home/
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.s
@@ -300,7 +313,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.s: home/
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/cdc/cdc_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.obj
@@ -308,7 +321,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.obj: hom
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.i
@@ -316,7 +329,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.i: home/
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.s
@@ -324,7 +337,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.s: home/
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
@@ -332,7 +345,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.obj: 
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
@@ -340,7 +353,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.i: ho
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
@@ -348,7 +361,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.s: ho
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/dfu/dfu_rt_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.obj
@@ -356,7 +369,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.obj: hom
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.i
@@ -364,7 +377,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.i: home/
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.s
@@ -372,7 +385,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.s: home/
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/hid/hid_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.obj
@@ -380,7 +393,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.obj: h
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.i
@@ -388,7 +401,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.i: hom
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.s
@@ -396,7 +409,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.s: hom
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/midi/midi_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.obj
@@ -404,7 +417,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.obj: hom
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.i
@@ -412,7 +425,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.i: home/
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.s
@@ -420,7 +433,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.s: home/
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/msc/msc_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
@@ -428,7 +441,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.ob
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
@@ -436,7 +449,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.i:
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
@@ -444,7 +457,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.s:
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ecm_rndis_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.obj
@@ -452,7 +465,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.obj: hom
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.i
@@ -460,7 +473,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.i: home/
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.s
@@ -468,7 +481,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.s: home/
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/net/ncm_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
@@ -476,7 +489,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.ob
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
@@ -484,7 +497,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.i:
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
@@ -492,7 +505,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.s:
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/usbtmc/usbtmc_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.obj
@@ -500,7 +513,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.ob
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.i
@@ -508,7 +521,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.i:
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.s
@@ -516,7 +529,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.s:
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/vendor/vendor_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.obj
@@ -524,7 +537,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.obj:
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.i
@@ -532,7 +545,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.i: h
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.s
@@ -540,7 +553,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.s: h
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/video/video_device.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.obj
@@ -548,7 +561,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.obj: home/na
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.i
@@ -556,7 +569,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.i: home/nast
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.s
@@ -564,7 +577,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.s: home/nast
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/common/tusb_fifo.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.obj
@@ -572,7 +585,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.obj: home/nastyst
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.i
@@ -580,7 +593,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.i: home/nastyst16
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.s
@@ -588,7 +601,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.s: home/nastyst16
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.obj
@@ -596,7 +609,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.obj: home
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.i
@@ -604,7 +617,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.i: home/n
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.s
@@ -612,7 +625,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.s: home/n
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/device/usbd_control.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
@@ -620,7 +633,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/d
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
@@ -628,7 +641,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/d
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
@@ -636,7 +649,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/d
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
@@ -644,7 +657,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/r
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
@@ -652,7 +665,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/r
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
@@ -660,7 +673,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/r
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.obj
@@ -668,7 +681,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.obj: home/nastyst16/.pic
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.i: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.i
@@ -676,7 +689,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.i: home/nastyst16/.pico-
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.s: home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.s
@@ -684,7 +697,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.s: home/nastyst16/.pico-
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/tusb.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.obj
@@ -692,7 +705,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.obj: ho
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.i
@@ -700,7 +713,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.i: home
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.s
@@ -708,7 +721,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.s: home
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/critical_section.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
@@ -716,7 +729,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.obj: home/nast
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.i
@@ -724,7 +737,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.i: home/nastys
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.s
@@ -732,7 +745,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.s: home/nastys
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
@@ -740,7 +753,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.obj: home/nastyst1
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.i
@@ -748,7 +761,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.i: home/nastyst16/
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.s
@@ -756,7 +769,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.s: home/nastyst16/
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.obj
@@ -764,7 +777,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.obj: home/nastyst16/
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.i
@@ -772,7 +785,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.i: home/nastyst16/.p
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.s
@@ -780,7 +793,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.s: home/nastyst16/.p
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_sync/sem.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
@@ -788,7 +801,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.obj: home/nastyst16
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.i
@@ -796,7 +809,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.i: home/nastyst16/.
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.s
@@ -804,7 +817,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.s: home/nastyst16/.
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.obj
@@ -812,7 +825,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.obj: home
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.i
@@ -820,7 +833,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.i: home/n
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.s
@@ -828,7 +841,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.s: home/n
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_time/timeout_helper.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.obj
@@ -836,7 +849,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.obj: home/nasty
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.i
@@ -844,7 +857,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.i: home/nastyst
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.s
@@ -852,7 +865,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.s: home/nastyst
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/datetime.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
@@ -860,7 +873,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.obj: home/nastyst1
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.i
@@ -868,7 +881,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.i: home/nastyst16/
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.s
@@ -876,7 +889,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.s: home/nastyst16/
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.obj
@@ -884,7 +897,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.obj: home/nastyst1
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.i
@@ -892,7 +905,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.i: home/nastyst16/
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.s
@@ -900,7 +913,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.s: home/nastyst16/
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/common/pico_util/queue.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
@@ -908,7 +921,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.obj: home
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.i
@@ -916,7 +929,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.i: home/n
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.s
@@ -924,7 +937,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.s: home/n
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
@@ -932,7 +945,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.obj: ho
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.i
@@ -940,7 +953,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.i: home
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.s
@@ -948,7 +961,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.s: home
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_divider/divider.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_divider/divider.S.obj
@@ -956,15 +969,39 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_divider/divider.obj: 
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_divider/divider.S.obj
+
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.obj
+
+# target to build an object file
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.obj
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.obj
+
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.i
+
+# target to preprocess a source file
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.i
+
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.s
+
+# target to generate assembly for a file
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.obj
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.i
@@ -972,7 +1009,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.i: home/n
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.s
@@ -980,7 +1017,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.s: home/n
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
@@ -988,7 +1025,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.obj: home/n
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.i
@@ -996,7 +1033,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.i: home/nas
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.s
@@ -1004,7 +1041,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.s: home/nas
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
@@ -1012,7 +1049,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.obj: home/nas
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.i
@@ -1020,7 +1057,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.i: home/nasty
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.s
@@ -1028,7 +1065,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.s: home/nasty
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
@@ -1036,15 +1073,39 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain.S.obj
+
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.obj
+
+# target to build an object file
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.obj
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.obj
+
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.i
+
+# target to preprocess a source file
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.i
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.i
+
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.s
+
+# target to generate assembly for a file
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.s
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.obj
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.i
@@ -1052,7 +1113,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.i: home/nasty
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.s
@@ -1060,7 +1121,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.s: home/nasty
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
@@ -1068,7 +1129,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.obj: home/n
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.i
@@ -1076,7 +1137,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.i: home/nas
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.s
@@ -1084,7 +1145,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.s: home/nas
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
@@ -1092,7 +1153,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.obj: home
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.i
@@ -1100,7 +1161,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.i: home/n
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.s
@@ -1108,7 +1169,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.s: home/n
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
@@ -1116,7 +1177,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.obj: home/n
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.i
@@ -1124,7 +1185,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.i: home/nas
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.s
@@ -1132,7 +1193,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.s: home/nas
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.obj
@@ -1140,7 +1201,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.obj: home/n
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.i
@@ -1148,7 +1209,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.i: home/nas
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.s
@@ -1156,7 +1217,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.s: home/nas
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_vreg/vreg.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
@@ -1164,7 +1225,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.obj
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.i
@@ -1172,7 +1233,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.i: 
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.s
@@ -1180,7 +1241,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.s: 
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
@@ -1188,7 +1249,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.obj: home/n
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.i
@@ -1196,7 +1257,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.i: home/nas
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.s
@@ -1204,7 +1265,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.s: home/nas
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
@@ -1212,7 +1273,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.obj
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
@@ -1220,7 +1281,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.obj: home
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.i
@@ -1228,7 +1289,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.i: home/n
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.s
@@ -1236,7 +1297,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.s: home/n
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
@@ -1244,7 +1305,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.obj: home
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
@@ -1252,7 +1313,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.obj: 
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
@@ -1260,7 +1321,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.ob
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.i
@@ -1268,7 +1329,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.i:
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.s
@@ -1276,7 +1337,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.s:
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.obj
@@ -1284,7 +1345,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.obj: h
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.i
@@ -1292,7 +1353,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.i: hom
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.s
@@ -1300,7 +1361,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.s: hom
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_math.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
@@ -1308,7 +1369,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
@@ -1316,7 +1377,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enu
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
@@ -1324,7 +1385,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enu
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
@@ -1332,7 +1393,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enu
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
@@ -1340,7 +1401,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.obj: ho
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
@@ -1348,7 +1409,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.obj:
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.i
@@ -1356,7 +1417,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.i: h
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.s
@@ -1364,7 +1425,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.s: h
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.obj
@@ -1372,7 +1433,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.obj: hom
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.i
@@ -1380,7 +1441,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.i: home/
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.s
@@ -1388,7 +1449,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.s: home/
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_math.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
@@ -1396,7 +1457,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.o
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
@@ -1404,7 +1465,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.obj
@@ -1412,7 +1473,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.obj: h
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.i
@@ -1420,7 +1481,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.i: hom
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.s
@@ -1428,7 +1489,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.s: hom
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_malloc/pico_malloc.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
@@ -1436,7 +1497,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.obj
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
@@ -1444,7 +1505,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.obj: ho
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.i
@@ -1452,7 +1513,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.i: home
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.s
@@ -1460,7 +1521,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.s: home
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
@@ -1468,7 +1529,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.obj: home/n
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.i
@@ -1476,7 +1537,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.i: home/nas
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.s
@@ -1484,7 +1545,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.s: home/nas
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
@@ -1492,7 +1553,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.obj: home
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.i
@@ -1500,7 +1561,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.i: home/n
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.s
@@ -1508,7 +1569,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.s: home/n
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
@@ -1516,7 +1577,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.i
@@ -1524,7 +1585,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.s
@@ -1532,7 +1593,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1540,7 +1601,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.obj: h
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.obj
@@ -1548,7 +1609,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.i
@@ -1556,7 +1617,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.s
@@ -1564,7 +1625,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/new_delete.cpp.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
@@ -1572,7 +1633,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.obj: home/nas
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.i
@@ -1580,7 +1641,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.i: home/nasty
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.s
@@ -1588,15 +1649,39 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.s: home/nasty
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.s
+
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.obj
+
+# target to build an object file
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.i
+
+# target to preprocess a source file
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.i
+
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.s
+
+# target to generate assembly for a file
+home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
+.PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.obj
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.i
@@ -1604,7 +1689,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.s
@@ -1612,7 +1697,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
@@ -1620,7 +1705,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.obj: 
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
@@ -1628,7 +1713,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.i: ho
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
@@ -1636,7 +1721,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.s: ho
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
@@ -1644,7 +1729,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descr
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
@@ -1652,7 +1737,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descr
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
@@ -1660,7 +1745,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descr
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1668,7 +1753,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.obj: home/n
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.i
@@ -1676,7 +1761,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.i: home/nas
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.s
@@ -1684,7 +1769,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.s: home/nas
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.s
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.obj: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.obj
@@ -1692,7 +1777,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.obj: 
 
 # target to build an object file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.obj
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.obj
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.i: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.i
@@ -1700,7 +1785,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.i: ho
 
 # target to preprocess a source file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.i
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.i
 
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.s: home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.s
@@ -1708,7 +1793,7 @@ home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.s: ho
 
 # target to generate assembly for a file
 home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/HomeAutomation.dir/build.make CMakeFiles/HomeAutomation.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dht_example.dir/build.make CMakeFiles/dht_example.dir/home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.s
 .PHONY : home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_unique_id/unique_id.c.s
 
 # Help Target
@@ -1724,14 +1809,15 @@ help:
 	@echo "... bs2_default_bin"
 	@echo "... bs2_default_padded_checksummed_asm"
 	@echo "... cyw43_driver_picow_cyw43_bus_pio_spi_pio_h"
-	@echo "... HomeAutomation"
+	@echo "... dht_dht_pio_h"
 	@echo "... bs2_default"
-	@echo "... HomeAutomation.obj"
-	@echo "... HomeAutomation.i"
-	@echo "... HomeAutomation.s"
-	@echo "... dht11.obj"
-	@echo "... dht11.i"
-	@echo "... dht11.s"
+	@echo "... dht_example"
+	@echo "... dht/dht.obj"
+	@echo "... dht/dht.i"
+	@echo "... dht/dht.s"
+	@echo "... dht_example.obj"
+	@echo "... dht_example.i"
+	@echo "... dht_example.s"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.obj"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.i"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/lib/tinyusb/src/class/audio/audio_device.s"
@@ -1820,6 +1906,9 @@ help:
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.s"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_divider/divider.obj"
+	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.obj"
+	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.i"
+	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_dma/dma.s"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.obj"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.i"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_flash/flash.s"
@@ -1830,6 +1919,9 @@ help:
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.i"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.s"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq_handler_chain.obj"
+	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.obj"
+	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.i"
+	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pio/pio.s"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.obj"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.i"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.s"
@@ -1899,6 +1991,9 @@ help:
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.obj"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.i"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.s"
+	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.obj"
+	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.i"
+	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.s"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.obj"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.i"
 	@echo "... home/nastyst16/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_usb/reset_interface.s"

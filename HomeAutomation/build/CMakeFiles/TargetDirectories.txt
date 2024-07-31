@@ -1,4 +1,4 @@
-/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/CMakeFiles/HomeAutomation.dir
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/CMakeFiles/dht_example.dir
 /home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/CMakeFiles/ELF2UF2Build.dir
 /home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/CMakeFiles/edit_cache.dir
 /home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/CMakeFiles/rebuild_cache.dir
@@ -167,3 +167,6 @@
 /home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/src/rp2040/hardware_structs/CMakeFiles/rebuild_cache.dir
 /home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 /home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/dht/CMakeFiles/dht_dht_pio_h.dir
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/dht/CMakeFiles/edit_cache.dir
+/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/dht/CMakeFiles/rebuild_cache.dir

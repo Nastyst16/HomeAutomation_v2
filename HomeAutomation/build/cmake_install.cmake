@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/pico-sdk/cmake_install.cmake")
+  include("/home/nastyst16/Desktop/scoala_vara_tranca/HomeAutomation/HomeAutomation/build/dht/cmake_install.cmake")
 
 endif()
 
