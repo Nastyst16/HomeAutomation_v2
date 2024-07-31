@@ -1,4 +1,4 @@
-from flask import Flask, render_template_string, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 import serial
 import threading
 
@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Configurăm portul serial
 try:
-    ser = serial.Serial('/dev/ttyACM1', 9600, timeout=1)
+    ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
     print("Conexiune serial deschisă")
 except Exception as e:
     print(f"Eroare la deschiderea portului serial: {e}")
@@ -53,36 +53,7 @@ if ser:
 # Pagina web pentru a afișa mesajele, datele de temperatură/umiditate și controla LED-ul
 @app.route('/')
 def index():
-    return render_template_string('''
-        <!doctype html>
-        <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Control LED UART</title>
-        </head>
-        <body>
-            <h2>Control LED</h2>
-            <form action="/led/on" method="post">
-                <button type="submit">Aprinde LED</button>
-            </form>
-            <form action="/led/off" method="post">
-                <button type="submit">Stinge LED</button>
-            </form>
-            
-            <h2>Temperatură și Umiditate</h2>
-            <p>Temperatură: {{ temperature }}</p>
-            <p>Umiditate: {{ humidity }}</p>
-                                  
-            <h1>Mesaje UART</h1>
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        </body>
-        </html>
-    ''', messages=messages, temperature=temperature, humidity=humidity)
+    return render_template('index.html', messages=messages, temperature=temperature, humidity=humidity)
 
 @app.route('/led/on', methods=['POST'])
 def led_on():

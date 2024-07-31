@@ -1,0 +1,21 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    color: #343a40;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.navbar {
+    margin-bottom: 40px;
+}
+
+.icon {
+    width: 5px;  /* Setează lățimea la 30px, ajustează după preferințe */
+    height: 5px; /* Setează înălțimea la 30px, ajustează după preferințe */
+    vertical-align: middle; /* Aliniază vertical cu textul */
+}
