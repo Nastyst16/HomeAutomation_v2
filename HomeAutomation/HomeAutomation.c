@@ -50,7 +50,6 @@ int main() {
 
         }
 
-        sleep_ms(500);
 
         dht_start_measurement(&dht);
         
@@ -66,6 +65,6 @@ int main() {
             puts("Bad checksum");
         }
 
-        sleep_ms(2000);
+        sleep_ms(500);
     } while (true);
 }
