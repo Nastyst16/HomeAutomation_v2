@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # Configurăm portul serial
 try:
-    ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+    ser = serial.Serial('/dev/ttyACM1', 9600, timeout=1)
     print("Conexiune serial deschisă")
 except Exception as e:
     print(f"Eroare la deschiderea portului serial: {e}")

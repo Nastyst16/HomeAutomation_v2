@@ -10,12 +10,23 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-.navbar {
-    margin-bottom: 40px;
+.icon {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
 }
 
-.icon {
-    width: 5px;  /* Setează lățimea la 30px, ajustează după preferințe */
-    height: 5px; /* Setează înălțimea la 30px, ajustează după preferințe */
-    vertical-align: middle; /* Aliniază vertical cu textul */
+.thermometer-icon {
+    width: 50px; /* Ajustează dimensiunea după preferințe */
+    height: auto;
+}
+
+.lightbulb-icon {
+    width: 50px; /* Ajustează dimensiunea după preferințe */
+    height: auto;
+}
+
+.speech-bubble-icon {
+    width: 50px; /* Ajustează dimensiunea după preferințe */
+    height: auto;
 }
